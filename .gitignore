@@ -7,3 +7,5 @@ __pycache__/
 Telegram IDs.txt
 *.secret
 .env
+state.json
+logs/

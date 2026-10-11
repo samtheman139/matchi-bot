@@ -1,0 +1,22 @@
+# Hur många dagar framåt (inklusive idag) som bevakas.
+days_ahead: 7
+
+# slug  = sista delen av anläggningens URL, t.ex. matchi.se/facilities/hellastk
+# sport = Matchis sport-id (syns som &sport=... när du filtrerar på anläggningssidan). Tennis = 1, padel = 5.
+# windows = tidsfönster; en tid notifieras bara om den ligger helt inom ett fönster
+#           (start >= time_from och slut <= time_to).
+
+facilities:
+  - slug: hellastk
+    sport: 1
+    windows: &tennis_windows
+      - weekdays: [sat, sun]
+        time_from: "08:00"
+        time_to: "19:00"
+      - weekdays: [mon, tue, wed, thu, fri]
+        time_from: "18:00"
+        time_to: "20:00"
+
+  - slug: solnatenniscenter
+    sport: 1
+    windows: *tennis_windows
